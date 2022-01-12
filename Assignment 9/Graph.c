@@ -96,7 +96,7 @@ void DisplayMenu(){
 
 void main(){
 	
-	int i,j,v,ch,n;
+	int i,j,v,ch,n,x;
 
 
 	printf("\nEnter number of nodes: ");
@@ -104,7 +104,7 @@ void main(){
 	
 	printf("\n Enter values for Graph:");
 
-	for(i = 0; i < v; i++)		//Intiitalizing loopy nodes to 0, i.e. not accepting loops
+	for(i = 0; i < v; i++)		//Initializing loopy nodes to 0, i.e. not accepting loops
 		G[i][i] = 0;
 
 	for(i = 0; i < v; i++){
@@ -147,12 +147,31 @@ void main(){
 		scanf("%d",&n);
 		
 		if(n == 1){
+			
+			do{
+				printf("\nEnter source vertex (values between 0 and %d):  ",v-1);
+				scanf("%d",&x);
+				
+				if(x < && x >= v)
+					printf("\nEnter a valid choice!");
+				
+			}while(x >=0 && x < v);
+			
 			printf("\nBFS is: ");
-			BFS(0,v);
+			BFS(x,v);
 		}
 		else if(n == 2){
+			do{
+				printf("\nEnter source vertex (values between 0 and %d):  ",v-1);
+				scanf("%d",&x);
+				
+				if(x < && x >= v)
+					printf("\nEnter a valid choice!");
+				
+			}while(x >=0 && x < v);
+			
 			printf("\nDFS is: ");
-			DFS(0,v);
+			DFS(x,v);
 		}
 		else if(n == 3)
 			DisplayGraph(G,v);
