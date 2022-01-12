@@ -152,10 +152,10 @@ void main(){
 				printf("\nEnter source vertex (values between 0 and %d):  ",v-1);
 				scanf("%d",&x);
 				
-				if(x < && x >= v)
+				if(x < 0 && x >= v)
 					printf("\nEnter a valid choice!");
 				
-			}while(x >=0 && x < v);
+			}while(x < 0 && x >= v);
 			
 			printf("\nBFS is: ");
 			BFS(x,v);
@@ -165,10 +165,10 @@ void main(){
 				printf("\nEnter source vertex (values between 0 and %d):  ",v-1);
 				scanf("%d",&x);
 				
-				if(x < && x >= v)
+				if(x < 0 && x >= v)
 					printf("\nEnter a valid choice!");
 				
-			}while(x >=0 && x < v);
+			}while(x < 0 && x >= v);
 			
 			printf("\nDFS is: ");
 			DFS(x,v);
